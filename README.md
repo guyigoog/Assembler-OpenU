@@ -27,4 +27,4 @@ The assembler will generate the output files with the same filename and the foll
 You can find examples of inputs and outputs in the 'tests' folder.
 
 # More info
-For more information about the project and the instructions, read maman14 pdf file.
+For more information about the project and the instructions, read project pdf file.
