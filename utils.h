@@ -1,0 +1,36 @@
+#include "structs.h"
+
+char *next_word_string(char *dest, char *line);
+char *next_word_list(char *dest, char *line);
+char *next_word(char *seq);
+char *skip_whitespace(char *ch);
+void copy_word(char *dest, char *line);
+int end_of_line(char *line);
+int ignore(char *line);
+int get_index(char *word, const char *arr[], int n);
+int get_command(char *word);
+int get_directive(char *word);
+bool is_macro_valid(char *word);
+bool is_string(char *str);
+bool is_number(char *seq);
+bool is_register(char *word);
+char *create_file_name(char *original, int type);
+FILE *open_file(char *filename, int type);
+char *convert_to_base_32(unsigned int num);
+ext_ptr add_ext(ext_ptr *hptr, char *name, unsigned int reference);
+void free_ext(ext_ptr *hptr);
+void print_ext(ext_ptr h);
+label_ptr add_label(label_ptr *hptr, char *name, unsigned int address, bool external, ...);
+int delete_label(label_ptr *hptr, char *name);
+void free_labels(label_ptr *hptr);
+void offset_label_address(label_ptr label, int num, bool is_data);
+unsigned int get_label_address(label_ptr h, char *name);
+label_ptr get_label(label_ptr h, char *name);
+bool is_label_exist(label_ptr h, char *name);
+bool is_external_label(label_ptr h, char *name);
+void print_labels(label_ptr h);
+void print_error(int line_num);
+int is_error();
+unsigned int extract_bits(unsigned int word, int start, int end);
+void insert_word_to_instruction(unsigned int word);
+unsigned int insert_are(unsigned int info, int are);
